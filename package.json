@@ -12,5 +12,12 @@
     "consolidate": "~0.4.0",
     "connect-assets": "~2.3.3",
     "stylus": "~0.29.0"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*"
+  },
+  "scripts": {
+    "test": "mocha --compilers coffee:coffee-script --recursive test/"
   }
 }

@@ -1,7 +1,8 @@
-window.todoApp = window.todoApp || {}
-module = module || {}
+`var win = typeof(window) === 'undefined' ? {} : window`
+`var mod = typeof(module) === 'undefined' ? {} : module`
+win.todoApp = win.todoApp || {}
 
-module.export = window.todoApp.AppCtrl = ($scope) ->
+mod.exports = win.todoApp.AppCtrl = ($scope) ->
 	$scope.items = []
 
 	$scope.add = (newItem) ->
