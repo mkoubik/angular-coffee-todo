@@ -3,6 +3,7 @@ routes = require './routes'
 http = require 'http'
 path = require 'path'
 consolidate = require 'consolidate'
+assets = require 'connect-assets'
 
 app = express()
 
@@ -11,6 +12,7 @@ app.configure ->
 	app.set 'views', __dirname + '/views'
 	app.set 'view engine', 'html'
 	app.engine 'html', consolidate.eco
+	app.use assets()
 	app.use express.favicon()
 	app.use express.logger('dev')
 	app.use express.bodyParser()
