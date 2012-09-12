@@ -11,7 +11,6 @@
     "eco": "~1.1.0-rc-3",
     "consolidate": "~0.4.0",
     "connect-assets": "~2.3.3",
-    "stylus": "~0.29.0",
-    "bootstrap-stylus": "~0.2.1"
+    "stylus": "~0.29.0"
   }
 }
