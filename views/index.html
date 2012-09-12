@@ -3,7 +3,27 @@
 	<head>
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	</head>
-	<body ng-controller="AppCtrl">
+	<body ng-controller="AppCtrl" class="well">
+		<h1>Todo list</h1>
+		<p>
+			Remaining {{remaining()}} of {{items.length}}
+			[ <a ng-click="archive()" href>archive</a> ]
+		</p>
+		<ul class="unstyled">
+			<li ng-repeat="item in items">
+				<label>
+				<input type="checkbox" ng-model="item.done">
+				{{item.text}}
+				</label>
+			</li>
+		</ul>
+		<form>
+			<input ng-model="newItem.text">
+			<button ng-click="add(newItem)" class="btn btn-success">
+				<span class="icon icon-white icon-plus"></span>
+				Add to the list
+			</button>
+		</form>
 	</body>
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-resource.js"></script>
